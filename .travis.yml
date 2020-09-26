@@ -15,7 +15,7 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  - docker build -t simple-node-var-exercise .
+  - docker build -t simple-node-var-exercise --build-arg FOOD=${FOOD} .
   - docker tag simple-node-var-exercise himabharat/simple-node-var-exercise:latest
 
 after_success:
